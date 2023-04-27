@@ -1,14 +1,14 @@
 from custom_function import *
 
-def boleh_summon(arr):
-    jumlah_jin = hitungJin("jin_pengumpul",arr) + hitungJin("jin_pembangun",arr)
+def boleh_summon(data_user):
+    jumlah_jin = hitungJin("jin_pengumpul",data_user) + hitungJin("jin_pembangun",data_user)
     if (jumlah_jin < 100):
         return True
     else:
         return False
 
-def summonjin(arr):
-    status_summon = boleh_summon(arr)
+def summonjin(data_user):
+    status_summon = boleh_summon(data_user)
     berhenti_summon = False
     if status_summon:
         print("Jenis jin yang dapat dipanggil: ")
@@ -33,7 +33,7 @@ def summonjin(arr):
                 print()
 
                 uname_jin = input("Masukkan username jin: ")
-                while adaUsername(uname_jin,arr):
+                while adaUsername(uname_jin,data_user):
                     print()
                     print("Username \""+ uname_jin +"\" sudah diambil!")
                     print()
@@ -46,12 +46,12 @@ def summonjin(arr):
                     print()
                     password_jin = input("Masukkan password jin: ")  
                 
-                #Update array data_user
+                #Update data_useray data_user
                 for i in range(0,360,3):
-                    if arr[i] == None:
-                        arr[i] = uname_jin
-                        arr[i+1] = password_jin
-                        arr[i+2] = role
+                    if data_user[i] == None:
+                        data_user[i] = uname_jin
+                        data_user[i+1] = password_jin
+                        data_user[i+2] = role
                         break
                 #UI
                 print()
@@ -66,7 +66,7 @@ def summonjin(arr):
                     berhenti_summon = True
                     status_summon = False
                 else:
-                    status_summon = boleh_summon(arr)
+                    status_summon = boleh_summon(data_user)
         else:
             if (not(status_summon) and not(berhenti_summon)):
                 print("Jumlah Jin telah maksimal!. Bandung tidak dapat men-summon lebih dari itu.")
@@ -75,4 +75,4 @@ def summonjin(arr):
     else:
         print("Jumlah Jin telah maksimal!. Bandung tidak dapat men-summon lebih dari itu.")
 
-    return arr
+    return data_user

@@ -1,14 +1,14 @@
 from custom_function import *
 
-def ubahjin(arr):
+def ubahjin(data_user):
     uname_jin = input("Masukkan username jin : ")
 
-    while not(adaUsername(uname_jin,arr)):
+    if not(adaUsername(uname_jin,data_user)):
         print("Tidak ada jin dengan username tersebut.")
         uname_jin = input("Masukkan username jin : ")
     else:
-        idx_jin = get_index(uname_jin,arr)
-        role = arr[idx_jin + 2]
+        idx_jin = get_index(uname_jin,data_user)
+        role = data_user[idx_jin + 2]
         if role == "jin_pengumpul":
             cek = input("Jin ini bertipe “Pengumpul”. Yakin ingin mengubah ke tipe “Pembangun” (Y/N)? ")
             role = "jin_pembangun"
@@ -17,9 +17,9 @@ def ubahjin(arr):
             role = "jin_pengumpul"
 
         if cek == "Y":
-            arr[idx_jin + 2] = role
+            data_user[idx_jin + 2] = role
             print("Jin telah berhasil diubah.")
         else:
             print("Jin tidak jadi diubah.")
 
-    return arr
+    return data_user
