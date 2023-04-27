@@ -2,7 +2,7 @@ from custom_function import *
 
 def hapusjin(data_user,data_candi):
     uname_jin = input("Masukkan username jin : ")
-    while not(adaUsername(uname_jin,data_user)):
+    if not(adaUsername(uname_jin,data_user)):
         print()
         print("Tidak ada jin dengan username tersebut.")
         print()
@@ -12,17 +12,17 @@ def hapusjin(data_user,data_candi):
         if yakin == "N" or yakin == "n":
             print("Jin tidak jadi dihapus.")
         elif yakin == "Y" or yakin == "y":
-            #menghapus jin dari array data_user
+            #menghapus informasi jin dari array data_user
             for i in range(0,360,3):
                 if data_user[i] == uname_jin:
-                    #menghapus semua data pada 3 kolom yg berkaitan dgn identitas jin
+                    #menghapus semua data pada 3 kolom yg berisi informasi jin
                     for j in range(3):
                         data_user[i+j] = None
 
             #menghapus candi yang dibangun jin dari array data_candi
             for m in range(1,505,5):
                 if data_candi[m] == uname_jin:
-                    #menghapus semua data pada 5 kolom yg berkaitan dgn identitas jin
+                    #menghapus semua data pada 5 kolom yg berisi informasi candi yang dibangun oleh jin terhapus
                     for n in range(5):
                         data_candi[m+n] = None
 
