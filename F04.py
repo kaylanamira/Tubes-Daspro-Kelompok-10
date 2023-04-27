@@ -28,4 +28,4 @@ def hapusjin(data_user,data_candi):
 
             print("Jin telah berhasil dihapus dari alam gaib.")
 
-    return data_user,data_candi
+    return (data_user,data_candi)

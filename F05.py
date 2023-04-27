@@ -1,4 +1,4 @@
-from F01_F02 import *
+from custom_function import *
 
 def ubahjin(arr):
     uname_jin = input("Masukkan username jin : ")

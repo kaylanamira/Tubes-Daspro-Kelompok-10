@@ -75,4 +75,4 @@ def summonjin(arr):
     else:
         print("Jumlah Jin telah maksimal!. Bandung tidak dapat men-summon lebih dari itu.")
 
-    return (arr)
+    return arr
