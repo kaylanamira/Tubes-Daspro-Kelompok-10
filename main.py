@@ -11,9 +11,10 @@ csvCandi           = open("26-04-2023/candi.csv", 'r')
 csvUser            = open("26-04-2023/user.csv", 'r')
 csvBahan_bangunan  = open("26-04-2023/bahan_bangunan.csv", 'r')
 # konvert bacaan csv menjadi array
-arrayOfBahan = (konvert(csvCandi,csvUser,csvBahan_bangunan))[0]
-arrayOfCandi = (konvert(csvCandi,csvUser,csvBahan_bangunan))[1]
-arrayOfUser  = (konvert(csvCandi,csvUser,csvBahan_bangunan))[2]
+tempVar = konvert(csvCandi,csvUser,csvBahan_bangunan)
+arrayOfBahan = tempVar[0]
+arrayOfCandi = tempVar[1]
+arrayOfUser  = tempVar[2]
 
 # import Implementasi Primitif fitur-fitur dari file terpisah
 from F01 import * # F01 - Login
@@ -41,7 +42,7 @@ isLogin = False
 while isRun:
     #kondisi user belum login
     userInput = input(">>> ")
-
+    
     #Fungsi-fungsi ketika user belum login    
     if userInput == ("login"):      
         tempVar  = login(arrayOfUser)
@@ -83,7 +84,7 @@ while isRun:
                 arrayOfBahan = tempVar[0]
                 arrayOfCandi = tempVar[1]
             elif userInput == ("laporanjin"):
-                laporanJinDgnAkses()
+                laporanJinDgnAkses(arrayOfUser,arrayOfBahan,arrayOfCandi)
             # elif userInput == ("laporancandi"):
             # elif userInput == ("hancurkancandi")
             # elif userInput == ("ayamberkokok")
