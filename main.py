@@ -49,20 +49,50 @@ while isRun:
         UserName = (login(arrayOfUser))[2]
     elif userInput == ("logout"):   
         not_logout()
-    # elif userInput == ("save"):     
-        # fungsi save
+    elif userInput == ("save"):     
+        save(arrayOfUser,arrayOfCandi,arrayOfBahan)
     elif userInput == ("help"):     
         loginHelp()
     elif userInput == ("exit"):     
         isRun = exitNotLogin()
 
-    # kondisi user sudah login
-#    while isLogin:
-#        inp = input(">>>> ")
+    # fungsi-fungsi ketika user sudah melakukan login
+    while isLogin:
+        userInput = input(">>> ")
         
         # login sebagai role bandung_bondowoso
-        
-        
+        if role == 1:
+            
+            if userInput    == ("login"):
+                loginLagi()
+            elif userInput == ("logout"):
+                isLogin      = logout()
+            elif userInput == ("summonjin"):
+                arrayOfUser  = summonjin(arrayOfUser)
+            elif userInput == ("hapusjin"):
+                arrayOfUser  = (hapusjin(arrayOfUser,arrayOfCandi))[0]
+                arrayOfCandi = (hapusjin(arrayOfUser,arrayOfCandi))[1]
+            elif userInput == ("ubahjin"):
+                arrayOfUser  = ubahjin(arrayOfUser)
+            elif userInput == ("batchkumpul"):
+                arrayOfBahan = batchKumpul(arrayOfUser,arrayOfBahan)
+            elif userInput == ("batchbangun"):
+                arrayOfBahan = (batchBangun(arrayOfUser,arrayOfBahan,arrayOfCandi))[0]
+                arrayOfCandi = (batchBangun(arrayOfUser,arrayOfBahan,arrayOfCandi))[1]
+            elif userInput == ("laporanjin"):
+                laporanJinDgnAkses()
+            # elif userInput == ("laporancandi"):
+            # elif userInput == ("hancurkancandi")
+            # elif userInput == ("ayamberkokok")
+            # fungsinya
+            elif userInput == ("save"):
+                save(arrayOfUser,arrayOfCandi,arrayOfBahan)
+            elif userInput == ("help"):
+                bondowosoHelp()
+            elif userInput == ("exit"):
+                isLogin = (exitLogin())[0]
+                isRun   = (exitLogin())[1]
+                        
         # login sebagai role roro_jonggrang
             
         
