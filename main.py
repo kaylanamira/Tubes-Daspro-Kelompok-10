@@ -7,9 +7,9 @@
 from csvConverter import *
 # open csv
 # membuka file csv
-csvCandi           = open("data_csv/candi.csv", 'r')
-csvUser            = open("data_csv/user.csv", 'r')
-csvBahan_bangunan  = open("data_csv/bahan_bangunan.csv", 'r')
+csvCandi           = open("26-04-2023/candi.csv", 'r')
+csvUser            = open("26-04-2023/user.csv", 'r')
+csvBahan_bangunan  = open("26-04-2023/bahan_bangunan.csv", 'r')
 # konvert bacaan csv menjadi array
 arrayOfBahan = (konvert(csvCandi,csvUser,csvBahan_bangunan))[0]
 arrayOfCandi = (konvert(csvCandi,csvUser,csvBahan_bangunan))[1]
