@@ -38,11 +38,23 @@ from F16 import * # F16 - Exit
 # Algoritma
 isRun = True
 isLogin = False
-#while isRun:
-#    userInput = input(">>> ")
-    
-    # kondisi user belum login
-    # Fungsi-fungsi ketika user belum login
+while isRun:
+    #kondisi user belum login
+    userInput = input(">>> ")
+
+    #Fungsi-fungsi ketika user belum login    
+    if userInput == ("login"):      
+        isLogin  = (login(arrayOfUser))[0]
+        role     = (login(arrayOfUser))[1]
+        UserName = (login(arrayOfUser))[2]
+    elif userInput == ("logout"):   
+        not_logout()
+    # elif userInput == ("save"):     
+        # fungsi save
+    elif userInput == ("help"):     
+        loginHelp()
+    elif userInput == ("exit"):     
+        isRun = exitNotLogin()
 
     # kondisi user sudah login
 #    while isLogin:
