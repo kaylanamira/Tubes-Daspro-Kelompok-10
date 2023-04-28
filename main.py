@@ -44,9 +44,10 @@ while isRun:
 
     #Fungsi-fungsi ketika user belum login    
     if userInput == ("login"):      
-        isLogin  = (login(arrayOfUser))[0]
-        role     = (login(arrayOfUser))[1]
-        UserName = (login(arrayOfUser))[2]
+        tempVar  = login(arrayOfUser)
+        isLogin  = tempVar[0]
+        role     = tempVar[1]
+        UserName = tempVar[2]
     elif userInput == ("logout"):   
         not_logout()
     elif userInput == ("save"):     
@@ -70,15 +71,17 @@ while isRun:
             elif userInput == ("summonjin"):
                 arrayOfUser  = summonjin(arrayOfUser)
             elif userInput == ("hapusjin"):
-                arrayOfUser  = (hapusjin(arrayOfUser,arrayOfCandi))[0]
-                arrayOfCandi = (hapusjin(arrayOfUser,arrayOfCandi))[1]
+                tempVar = hapusjin(arrayOfUser,arrayOfCandi)
+                arrayOfUser  = tempVar[0]
+                arrayOfCandi = tempVar[1]
             elif userInput == ("ubahjin"):
                 arrayOfUser  = ubahjin(arrayOfUser)
             elif userInput == ("batchkumpul"):
                 arrayOfBahan = batchKumpul(arrayOfUser,arrayOfBahan)
             elif userInput == ("batchbangun"):
-                arrayOfBahan = (batchBangun(arrayOfUser,arrayOfBahan,arrayOfCandi))[0]
-                arrayOfCandi = (batchBangun(arrayOfUser,arrayOfBahan,arrayOfCandi))[1]
+                tempVar = batchBangun(arrayOfUser,arrayOfBahan,arrayOfCandi)
+                arrayOfBahan = tempVar[0]
+                arrayOfCandi = tempVar[1]
             elif userInput == ("laporanjin"):
                 laporanJinDgnAkses()
             # elif userInput == ("laporancandi"):
@@ -90,8 +93,9 @@ while isRun:
             elif userInput == ("help"):
                 bondowosoHelp()
             elif userInput == ("exit"):
-                isLogin = (exitLogin())[0]
-                isRun   = (exitLogin())[1]
+                tempVar = exitLogin()
+                isLogin = tempVar[0]
+                isRun   = tempVar[1]
                         
         # login sebagai role roro_jonggrang
         if role == 2:
@@ -116,9 +120,10 @@ while isRun:
             elif userInput == ("help"):
                 roroHelp()
             elif userInput == ("exit"):
-                isLogin = (exitLogin())[0]
-                isRun   = (exitLogin())[1]
-                    
+                tempVar = exitLogin()
+                isLogin = tempVar[0]
+                isRun   = tempVar[1]
+                                    
         # login sebagai role jin_pengumpul
         if role == 3:
             
@@ -143,9 +148,10 @@ while isRun:
             elif userInput == ("help"):
                 jinpengumpulHelp()
             elif userInput == ("exit"):
-                isLogin = (exitLogin())[0]
-                isRun   = (exitLogin())[1]
-                    
+                tempVar = exitLogin()
+                isLogin = tempVar[0]
+                isRun   = tempVar[1]
+                                    
         # login sebagai role jin_pembangun
         if role == 4:
             
@@ -154,8 +160,9 @@ while isRun:
             elif userInput == ("logout"):
                 isLogin      = logout()
             elif userInput == ("bangun"):
-                arrayOfBahan = (jinBangun(arrayOfBahan,arrayOfCandi,arrayOfUser))[0]
-                arrayOfBahan = (jinBangun(arrayOfBahan,arrayOfCandi,arrayOfUser))[1]
+                tempVar = jinBangun(arrayOfBahan,arrayOfCandi,arrayOfUser)
+                arrayOfBahan = tempVar[0]
+                arrayOfBahan = tempVar[1]
             # elif userInput == ("summonjin"):
             # elif userInput == ("hapusjin"):
             # elif userInput == ("ubahjin"):
@@ -172,6 +179,7 @@ while isRun:
             elif userInput == ("help"):
                 jinpembangunHelp()
             elif userInput == ("exit"):
-                isLogin = (exitLogin())[0]
-                isRun   = (exitLogin())[1]
-            
+                tempVar = exitLogin()
+                isLogin = tempVar[0]
+                isRun   = tempVar[1]
+                            
