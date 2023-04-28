@@ -64,7 +64,7 @@ while isRun:
         if role == 1:
             
             if userInput    == ("login"):
-                loginLagi()
+                loginLagi(UserName)
             elif userInput == ("logout"):
                 isLogin      = logout()
             elif userInput == ("summonjin"):
@@ -94,10 +94,84 @@ while isRun:
                 isRun   = (exitLogin())[1]
                         
         # login sebagai role roro_jonggrang
+        if role == 2:
             
-        
+            if userInput    == ("login"):
+                loginLagi(UserName)
+            elif userInput == ("logout"):
+                isLogin      = logout()
+            # elif userInput == ("summonjin"):
+            # elif userInput == ("hapusjin"):
+            # elif userInput == ("ubahjin"):
+            # elif userInput == ("batchkumpul"):
+            # elif userInput == ("batchbangun"):
+            # elif userInput == ("laporanjin"):
+                laporanJinNoAkses()
+            # elif userInput == ("laporancandi"):
+            # elif userInput == ("hancurkancandi")
+            # elif userInput == ("ayamberkokok")
+            # fungsinya
+            elif userInput == ("save"):
+                save(arrayOfUser,arrayOfCandi,arrayOfBahan)
+            elif userInput == ("help"):
+                roroHelp()
+            elif userInput == ("exit"):
+                isLogin = (exitLogin())[0]
+                isRun   = (exitLogin())[1]
+                    
         # login sebagai role jin_pengumpul
+        if role == 3:
             
-        
+            if userInput    == ("login"):
+                loginLagi(UserName)
+            elif userInput == ("logout"):
+                isLogin      = logout()
+            elif userInput == ("kumpul"):
+                arrayOfBahan = jinKumpul(arrayOfBahan)
+            # elif userInput == ("summonjin"):
+            # elif userInput == ("hapusjin"):
+            # elif userInput == ("ubahjin"):
+            # elif userInput == ("batchkumpul"):
+            # elif userInput == ("batchbangun"):
+            elif userInput == ("laporanjin"):
+                laporanJinNoAkses()
+            # elif userInput == ("laporancandi"):
+            # elif userInput == ("hancurkancandi")
+            # elif userInput == ("ayamberkokok")
+            elif userInput == ("save"):
+                save(arrayOfUser,arrayOfCandi,arrayOfBahan)
+            elif userInput == ("help"):
+                jinpengumpulHelp()
+            elif userInput == ("exit"):
+                isLogin = (exitLogin())[0]
+                isRun   = (exitLogin())[1]
+                    
         # login sebagai role jin_pembangun
+        if role == 4:
+            
+            if userInput    == ("login"):
+                loginLagi(UserName)
+            elif userInput == ("logout"):
+                isLogin      = logout()
+            elif userInput == ("bangun"):
+                arrayOfBahan = (jinBangun(arrayOfBahan,arrayOfCandi,arrayOfUser))[0]
+                arrayOfBahan = (jinBangun(arrayOfBahan,arrayOfCandi,arrayOfUser))[1]
+            # elif userInput == ("summonjin"):
+            # elif userInput == ("hapusjin"):
+            # elif userInput == ("ubahjin"):
+            # elif userInput == ("batchkumpul"):
+            # elif userInput == ("batchbangun"):
+            elif userInput == ("laporanjin"):
+                laporanJinNoAkses()
+            # elif userInput == ("laporancandi"):
+            # elif userInput == ("hancurkancandi")
+            # elif userInput == ("ayamberkokok")
+            # fungsinya
+            elif userInput == ("save"):
+                save(arrayOfUser,arrayOfCandi,arrayOfBahan)
+            elif userInput == ("help"):
+                jinpembangunHelp()
+            elif userInput == ("exit"):
+                isLogin = (exitLogin())[0]
+                isRun   = (exitLogin())[1]
             
