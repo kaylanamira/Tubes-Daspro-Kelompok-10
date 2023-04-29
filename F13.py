@@ -4,7 +4,7 @@ from csvConverter import *
 def load(namaFolder):
 
     # cek ada tidaknya namaFolder yang diberikan
-    if os.path.exists(namaFolder or "save",namaFolder) == False:
+    if os.path.exists(namaFolder) == False:
         print(f'\nFolder "{namaFolder}" tidak ditemukan.')
         # jika tidak ada maka keluar program
         exit()

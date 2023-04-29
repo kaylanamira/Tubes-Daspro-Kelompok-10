@@ -62,7 +62,7 @@ while isRun:
     elif userInput == ("help"):     
         loginHelp()
     elif userInput == ("exit"):     
-        isRun = exitNotLogin()
+        isRun = exitNotLogin(arrayOfUser,arrayOfCandi,arrayOfBahan)
 
     # fungsi-fungsi ketika user sudah melakukan login
     while isLogin:
@@ -102,7 +102,7 @@ while isRun:
             elif userInput == ("help"):
                 bondowosoHelp()
             elif userInput == ("exit"):
-                tempVar = exitLogin()
+                tempVar = exitLogin(arrayOfUser,arrayOfCandi,arrayOfBahan)
                 isLogin = tempVar[0]
                 isRun   = tempVar[1]
                         
@@ -133,7 +133,7 @@ while isRun:
             elif userInput == ("help"):
                 roroHelp()
             elif userInput == ("exit"):
-                tempVar = exitLogin()
+                tempVar = exitLogin(arrayOfUser,arrayOfCandi,arrayOfBahan)
                 isLogin = tempVar[0]
                 isRun   = tempVar[1]
                                     
@@ -166,7 +166,7 @@ while isRun:
             elif userInput == ("help"):
                 jinpengumpulHelp()
             elif userInput == ("exit"):
-                tempVar = exitLogin()
+                tempVar = exitLogin(arrayOfUser,arrayOfCandi,arrayOfBahan)
                 isLogin = tempVar[0]
                 isRun   = tempVar[1]
                                     
@@ -201,7 +201,7 @@ while isRun:
             elif userInput == ("help"):
                 jinpembangunHelp()
             elif userInput == ("exit"):
-                tempVar = exitLogin()
+                tempVar = exitLogin(arrayOfUser,arrayOfCandi,arrayOfBahan)
                 isLogin = tempVar[0]
                 isRun   = tempVar[1]
                             
