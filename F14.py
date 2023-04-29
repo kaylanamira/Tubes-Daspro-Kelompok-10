@@ -21,7 +21,7 @@ def strUser(user):
 def strCandi(candi):
     tempStr = ""
     for i in range(505):
-        if candi[i] != None and i != 359:
+        if candi[i] != None and i != 505:
             if i%5 == 4:
                 tempStr += candi[i]
                 tempStr += "\n"
@@ -35,7 +35,7 @@ def strCandi(candi):
 def strBahan(bahan):
     tempStr = ""
     for i in range(15):
-        if bahan[i] != None and i != 359:
+        if bahan[i] != None and i != 14:
             if i%3 == 2:
                 tempStr += bahan[i]
                 tempStr += "\n"
