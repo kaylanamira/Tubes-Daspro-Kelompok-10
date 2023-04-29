@@ -42,4 +42,7 @@ def batchBangun(user,bahan,candi):
             bahan = tempTuple[0]; candi = tempTuple[1]
     
     return (bahan,candi)
+
+def batchBukanBandung():
+    print("batchbangun hanya dapat diakses oleh Bandung Bondowoso")
         

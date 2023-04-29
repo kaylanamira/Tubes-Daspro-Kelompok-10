@@ -110,8 +110,10 @@ while isRun:
             # elif userInput == ("summonjin"):
             # elif userInput == ("hapusjin"):
             # elif userInput == ("ubahjin"):
-            # elif userInput == ("batchkumpul"):
-            # elif userInput == ("batchbangun"):
+            elif userInput == ("batchkumpul"):
+                batchBukanBandung()
+            elif userInput == ("batchbangun"):
+                batchBukanBandung()
             elif userInput == ("laporanjin"):
                 laporanJinNoAkses()
             elif userInput == ("laporancandi"):
@@ -141,8 +143,10 @@ while isRun:
             # elif userInput == ("summonjin"):
             # elif userInput == ("hapusjin"):
             # elif userInput == ("ubahjin"):
-            # elif userInput == ("batchkumpul"):
-            # elif userInput == ("batchbangun"):
+            elif userInput == ("batchkumpul"):
+                batchBukanBandung()
+            elif userInput == ("batchbangun"):
+                batchBukanBandung()
             elif userInput == ("laporanjin"):
                 laporanJinNoAkses()
             elif userInput == ("laporancandi"):
@@ -174,8 +178,10 @@ while isRun:
             # elif userInput == ("summonjin"):
             # elif userInput == ("hapusjin"):
             # elif userInput == ("ubahjin"):
-            # elif userInput == ("batchkumpul"):
-            # elif userInput == ("batchbangun"):
+            elif userInput == ("batchkumpul"):
+                batchBukanBandung()
+            elif userInput == ("batchbangun"):
+                batchBukanBandung()
             elif userInput == ("laporanjin"):
                 laporanJinNoAkses()
             elif userInput == ("laporancandi"):
