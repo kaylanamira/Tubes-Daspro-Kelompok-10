@@ -85,10 +85,12 @@ while isRun:
                 arrayOfCandi = tempVar[1]
             elif userInput == ("laporanjin"):
                 laporanJinDgnAkses(arrayOfUser,arrayOfBahan,arrayOfCandi)
-            # elif userInput == ("laporancandi"):
-            # elif userInput == ("hancurkancandi")
-            # elif userInput == ("ayamberkokok")
-            # fungsinya
+            elif userInput == ("laporancandi"):
+                laporanCandiDgnAkses(arrayOfCandi)
+            elif userInput == ("hancurkancandi"):
+                hancurkanNotLogin()
+            elif userInput == ("ayamberkokok"):
+                berkokokNotLogin()
             elif userInput == ("save"):
                 save(arrayOfUser,arrayOfCandi,arrayOfBahan)
             elif userInput == ("help"):
@@ -110,12 +112,14 @@ while isRun:
             # elif userInput == ("ubahjin"):
             # elif userInput == ("batchkumpul"):
             # elif userInput == ("batchbangun"):
-            # elif userInput == ("laporanjin"):
+            elif userInput == ("laporanjin"):
                 laporanJinNoAkses()
-            # elif userInput == ("laporancandi"):
-            # elif userInput == ("hancurkancandi")
-            # elif userInput == ("ayamberkokok")
-            # fungsinya
+            elif userInput == ("laporancandi"):
+                laporanCandiNoAkses()
+            elif userInput == ("hancurkancandi"):
+                hancurkan(arrayOfCandi)
+            elif userInput == ("ayamberkokok"):
+                berkokok(arrayOfCandi)
             elif userInput == ("save"):
                 save(arrayOfUser,arrayOfCandi,arrayOfBahan)
             elif userInput == ("help"):
@@ -141,9 +145,12 @@ while isRun:
             # elif userInput == ("batchbangun"):
             elif userInput == ("laporanjin"):
                 laporanJinNoAkses()
-            # elif userInput == ("laporancandi"):
-            # elif userInput == ("hancurkancandi")
-            # elif userInput == ("ayamberkokok")
+            elif userInput == ("laporancandi"):
+                laporanCandiNoAkses()
+            elif userInput == ("hancurkancandi"):
+                hancurkanNotLogin()
+            elif userInput == ("ayamberkokok"):
+                berkokokNotLogin()
             elif userInput == ("save"):
                 save(arrayOfUser,arrayOfCandi,arrayOfBahan)
             elif userInput == ("help"):
@@ -171,10 +178,12 @@ while isRun:
             # elif userInput == ("batchbangun"):
             elif userInput == ("laporanjin"):
                 laporanJinNoAkses()
-            # elif userInput == ("laporancandi"):
-            # elif userInput == ("hancurkancandi")
-            # elif userInput == ("ayamberkokok")
-            # fungsinya
+            elif userInput == ("laporancandi"):
+                laporanCandiNoAkses()
+            elif userInput == ("hancurkancandi"):
+                hancurkanNotLogin()
+            elif userInput == ("ayamberkokok"):
+                berkokokNotLogin()
             elif userInput == ("save"):
                 save(arrayOfUser,arrayOfCandi,arrayOfBahan)
             elif userInput == ("help"):
