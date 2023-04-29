@@ -3,19 +3,8 @@
 # Waktu pengejaan : 11/04/2023 - 02/05/2023 
 # Tubes K07-10
 
-# import file openCSV
-from csvConverter import *
-# open csv
-# membuka file csv
-csvCandi           = open("26-04-2023/candi.csv", 'r')
-csvUser            = open("26-04-2023/user.csv", 'r')
-csvBahan_bangunan  = open("26-04-2023/bahan_bangunan.csv", 'r')
-# konvert bacaan csv menjadi array
-tempVar = konvert(csvCandi,csvUser,csvBahan_bangunan)
-arrayOfBahan = tempVar[0]
-arrayOfCandi = tempVar[1]
-arrayOfUser  = tempVar[2]
-
+# import library
+import argparse
 # import Implementasi Primitif fitur-fitur dari file terpisah
 from F01 import * # F01 - Login
 from F02 import * # F02 - Logout
@@ -34,9 +23,26 @@ from F14 import * # F14 - Save
 from F15 import * # F15 - Help
 from F16 import * # F16 - Exit
 
-# Kamus
+# bagian parser
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("namaFolder", type=str, nargs="?")
+    args = parser.parse_args()
+    
+    if args.namaFolder == None:
+        print("\nTidak ada nama folder yang diberikan!\n")
+        print("Usage: \x1B[3mpython main.py\x1B[0m <nama_folder>")
+        # jika tidak ada maka keluar program
+        exit()
+    else:
+        tempArray = load(args.namaFolder)
 
-# Algoritma
+# Memasukkan hasil load data ke array
+arrayOfBahan = tempArray[0]
+arrayOfCandi = tempArray[1]
+arrayOfUser  = tempArray[2]
+
+# Algoritma userInput
 isRun = True
 isLogin = False
 while isRun:
