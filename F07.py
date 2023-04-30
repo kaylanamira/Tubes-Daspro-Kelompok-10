@@ -8,9 +8,9 @@ def isAdaElmt(bahan):
     return False
 
 def createElmt(bahan):
-    bahan[3] = "pasir" ; bahan[5]  = "0"
-    bahan[6] = "batu"  ; bahan[8]  = "0"
-    bahan[9] = "air"   ; bahan[11] = "0"
+    bahan[3] = "pasir" ; bahan[4]  = "bahan pemadat" ; bahan[5]  = "0"
+    bahan[6] = "batu"  ; bahan[7]  = "bahan pondasi" ; bahan[8]  = "0"
+    bahan[9] = "air"   ; bahan[10] = "bahan perekat" ; bahan[11] = "0"
     return bahan    
 
 # Pertanyaan apakah deskripsi tidak usah diadakan, karena tidak berpengaruh di implementasi program
