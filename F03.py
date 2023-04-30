@@ -13,37 +13,29 @@ def summonjin(data_user):
     if status_summon:
         print("Jenis jin yang dapat dipanggil: ")
         print(" (1) Pengumpul - Bertugas mengumpulkan bahan bangunan")
-        print(" (2) Pembangun - Bertugas membangun candi")
-        print()
+        print(" (2) Pembangun - Bertugas membangun candi\n")
         
         while (status_summon):
             jenis = int(input("Masukkan nomor jenis jin yang ingin dipanggil : "))
-            print()
             if (jenis != 1) and (jenis != 2):
-                print("Tidak ada jenis jin bernomor \""+ str(jenis) + "\" !")
-                print()
+                print("\nTidak ada jenis jin bernomor \""+ str(jenis) + "\" !"+"\n")
 
             else:
                 if jenis == 1:
                     role = "jin_pengumpul"
-                    print("Memilih jin \"Pengumpul\".")
+                    print("\nMemilih jin \"Pengumpul\".\n")
                 elif jenis == 2:
                     role = "jin_pembangun"
-                    print("Memilih jin \"Pembangun\".")
-                print()
+                    print("\nMemilih jin \"Pembangun\".\n")
 
-                uname_jin = input("Masukkan username jin: ")
+                uname_jin = input("Masukkan username jin : ")
                 while adaUsername(uname_jin,data_user):
-                    print()
-                    print("Username \""+ uname_jin +"\" sudah diambil!")
-                    print()
+                    print("\nUsername \""+ uname_jin +"\" sudah diambil!\n")
                     uname_jin = input("Masukkan username jin: ")   
 
-                password_jin = input("Masukkan password jin: ")  
-                print() 
+                password_jin = input("Masukkan password jin : ")  
                 while len(password_jin)<5 or len(password_jin)>25:
-                    print("Password panjangnya harus 5-25 karakter!")
-                    print()
+                    print("\nPassword panjangnya harus 5-25 karakter!\n")
                     password_jin = input("Masukkan password jin: ")  
                 
                 #Update data_useray data_user
@@ -54,14 +46,12 @@ def summonjin(data_user):
                         data_user[i+2] = role
                         break
                 #UI
-                print()
-                print("Mengumpulkan sesajen...")
+                print("\nMengumpulkan sesajen...")
                 print("Menyerahkan sesajen...")
-                print("Membacakan mantra...")
-                print()
+                print("Membacakan mantra...\n")
                 print(f"Jin {uname_jin} berhasil dipanggil!")
 
-                pilihan = input("Apakah ingin summon lagi? (Y/N)")
+                pilihan = input("\nApakah ingin summon lagi? (Y/N)")
                 if pilihan == "N" or pilihan == "n" :
                     berhenti_summon = True
                     status_summon = False
@@ -76,3 +66,6 @@ def summonjin(data_user):
         print("Jumlah Jin telah maksimal!. Bandung tidak dapat men-summon lebih dari itu.")
 
     return data_user
+
+def summonNotBandung():
+    print("summonjin hanya dapat dilakukan oleh Bandung Bondowoso.")

@@ -3,9 +3,7 @@ from custom_function import *
 def hapusjin(data_user,data_candi):
     uname_jin = input("Masukkan username jin : ")
     if not(adaUsername(uname_jin,data_user)):
-        print()
-        print("Tidak ada jin dengan username tersebut.")
-        print()
+        print("\nTidak ada jin dengan username tersebut.\n")
         uname_jin = input("Masukkan username jin : ")
     else:
         yakin = input(f"Apakah anda yakin ingin menghapus jin dengan username {uname_jin} (Y/N)?")
@@ -29,3 +27,6 @@ def hapusjin(data_user,data_candi):
             print("Jin telah berhasil dihapus dari alam gaib.")
 
     return (data_user,data_candi)
+
+def hapusNotBandung():
+    print("hapusjin hanya dapat dilakukan oleh Bandung Bondowoso.")
