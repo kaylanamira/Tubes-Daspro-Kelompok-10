@@ -44,5 +44,5 @@ def batchBangun(user,bahan,candi):
     return (bahan,candi)
 
 def batchBukanBandung():
-    print("batchbangun hanya dapat diakses oleh Bandung Bondowoso")
+    print("batch hanya dapat diakses oleh Bandung Bondowoso")
         
