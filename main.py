@@ -186,7 +186,7 @@ while isRun:
             elif userInput == ("bangun"):
                 tempVar = jinBangun(arrayOfBahan,arrayOfCandi,arrayOfUser)
                 arrayOfBahan = tempVar[0]
-                arrayOfBahan = tempVar[1]
+                arrayOfCandi = tempVar[1]
             elif userInput == ("summonjin"):
                 summonNotBandung()
             elif userInput == ("hapusjin"):
