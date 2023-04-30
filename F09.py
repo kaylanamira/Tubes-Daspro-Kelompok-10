@@ -67,12 +67,7 @@ def jinTer(candi):
                 tempStrMalas = compareStrMalas(tempStrMalas,arrayPemnbuatCandi[i])    
         
         return (tempStrRajin,tempStrMalas)
-
-def totalJin(user):
-    jin = countTipeJin(user)
-    total = jin[0] + jin[1]
-    return total    
-        
+      
 def ambilDataBahan(bahan):
     
     # cek apakah array None
@@ -86,12 +81,15 @@ def laporanJinNoAkses():
     print("Laporan jin hanya dapat diakses oleh akun Bandung Bondowoso.\n")
     
 def laporanJinDgnAkses(user,bahan,candi):
+    jin     = countTipeJin(user)
+    jinYang = jinTer(candi)
+    Bahan   = ambilDataBahan(bahan)
     print()
-    print("> Total jin:", totalJin(user))
-    print("> Total jin Pengumpul:", (countTipeJin(user))[0])
-    print("> Total jin Pembangun:", (countTipeJin(user))[1])
-    print("> Jin Terajin:", (jinTer(candi))[0])
-    print("> Jin Termalas:", (jinTer(candi))[1])
-    print("> Jumlah Pasir:", (ambilDataBahan(bahan))[0] ,"unit")
-    print("> Jumlah Air:", (ambilDataBahan(bahan))[2] ,"unit")
-    print("> Jumlah Batu:", (ambilDataBahan(bahan))[1] ,"unit\n")
+    print("> Total jin:", jin[0] + jin[1])
+    print("> Total jin Pengumpul:", jin[0])
+    print("> Total jin Pembangun:", jin[1])
+    print("> Jin Terajin:", jinYang[0])
+    print("> Jin Termalas:", jinYang[1])
+    print("> Jumlah Pasir:", Bahan[0] ,"unit")
+    print("> Jumlah Air:", Bahan[2] ,"unit")
+    print("> Jumlah Batu:", Bahan[1] ,"unit\n")

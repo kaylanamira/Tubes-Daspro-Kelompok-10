@@ -12,8 +12,6 @@ def banyakCandi(candi):
     return count
 
 def assignCandi(candi,user,n1,n2,n3):
-    # ambil data bahan bangunan dari bahan.csv
-    
     for i in range(5,505,5):
         if candi[i] == None:
             candi[i]   = str(i//5 - 1)
@@ -74,10 +72,8 @@ def pembangun(banyak,user):
     # mengembalikan array
     return jinPembangun            
 
-## Pertanyaan alurnya how? apakah mengecek dulu keseluruhan bahan/ membangun satu persatu dan menstop apabila kurang?
 def jinBatchBangun(banyak,bahan,candi,user):
     # inisialisasi banyak bahan
-    
     nPasirArr = [0 for i in range(banyak)]
     nBatuArr = [0 for i in range(banyak)]
     nAirArr = [0 for i in range(banyak)]

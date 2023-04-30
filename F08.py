@@ -30,15 +30,15 @@ def batchKumpul(user,bahan):
     return bahan
 
 def batchBangun(user,bahan,candi):
-    # hitung jumlah jin dengan tipe tertentu
-    countJin = countTipeJin(user)
+    # hitung jumlah jin dengan tipe tertentu (role jin_pembangun)
+    countJinPembangun = (countTipeJin(user))[1]
     
-    # kondisi batchBangung
-    if countJin[1] == 0: # jumlah jin pembangun berjumlah 0
+    # kondisi batchBangun
+    if countJinPembangun == 0: # jumlah jin pembangun berjumlah 0
         print("Bangun gagal. Anda tidak punya jin pembangun. Silahkan summon terlebih dahulu.\n")
-    else:                # jumlah jin pembangun berjumlah tidak 0
-        if countJin[1] + banyakCandi(candi) >= 0:
-            tempTuple = jinBatchBangun(countJin[1],bahan,candi,user)
+    else:                      # jumlah jin pembangun berjumlah tidak 0
+        if countJinPembangun + banyakCandi(candi) >= 0:
+            tempTuple = jinBatchBangun(countJinPembangun,bahan,candi,user)
             bahan = tempTuple[0]; candi = tempTuple[1]
     
     return (bahan,candi)

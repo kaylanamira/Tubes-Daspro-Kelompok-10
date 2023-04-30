@@ -62,7 +62,9 @@ def jinKumpul(bahan):
     if isAdaElmt(bahan) == False:
         bahan = createElmt(bahan)
     
+    # assign ke array bahan
     print(f"Jin menemukan {nPasir} pasir, {nBatu} batu, dan {nAir} air.\n")
     bahan = assignBahan(bahan,nPasir,nBatu,nAir)
     
+    # mengembalikan array bahan
     return bahan
