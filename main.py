@@ -113,9 +113,12 @@ while isRun:
                 loginLagi(UserName)
             elif userInput == ("logout"):
                 isLogin      = logout()
-            # elif userInput == ("summonjin"):
-            # elif userInput == ("hapusjin"):
-            # elif userInput == ("ubahjin"):
+            elif userInput == ("summonjin"):
+                summonNotBandung()
+            elif userInput == ("hapusjin"):
+                hapusNotBandung()
+            elif userInput == ("ubahjin"):
+                ubahNotBandung()
             elif userInput == ("batchkumpul"):
                 batchBukanBandung()
             elif userInput == ("batchbangun"):
@@ -146,9 +149,12 @@ while isRun:
                 isLogin      = logout()
             elif userInput == ("kumpul"):
                 arrayOfBahan = jinKumpul(arrayOfBahan)
-            # elif userInput == ("summonjin"):
-            # elif userInput == ("hapusjin"):
-            # elif userInput == ("ubahjin"):
+            elif userInput == ("summonjin"):
+                summonNotBandung()
+            elif userInput == ("hapusjin"):
+                hapusNotBandung()
+            elif userInput == ("ubahjin"):
+                ubahNotBandung()
             elif userInput == ("batchkumpul"):
                 batchBukanBandung()
             elif userInput == ("batchbangun"):
@@ -181,9 +187,12 @@ while isRun:
                 tempVar = jinBangun(arrayOfBahan,arrayOfCandi,arrayOfUser)
                 arrayOfBahan = tempVar[0]
                 arrayOfBahan = tempVar[1]
-            # elif userInput == ("summonjin"):
-            # elif userInput == ("hapusjin"):
-            # elif userInput == ("ubahjin"):
+            elif userInput == ("summonjin"):
+                summonNotBandung()
+            elif userInput == ("hapusjin"):
+                hapusNotBandung()
+            elif userInput == ("ubahjin"):
+                ubahNotBandung()
             elif userInput == ("batchkumpul"):
                 batchBukanBandung()
             elif userInput == ("batchbangun"):
