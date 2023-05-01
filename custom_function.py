@@ -316,10 +316,18 @@ def banyakCandi(candi):
             count += 1
     return count
 
+def deteksiID(candi):
+    berhitung = 0
+    for i in range(5,505,5):
+        if candi[i] == str(berhitung):
+            berhitung += 1
+        else:
+            return berhitung
+
 def assignCandi(candi,user,n1,n2,n3):
     for i in range(5,505,5):
         if candi[i] == None:
-            candi[i]   = str(i//5 - 1)
+            candi[i]   = str(deteksiID(candi))
             candi[i+1] = user
             candi[i+2] = str(n1)
             candi[i+3] = str(n2)

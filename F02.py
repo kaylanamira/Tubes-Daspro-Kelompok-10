@@ -4,4 +4,4 @@ def logout(): #Kondisi ketika user ingin logout pada keadaan sudah login
     return False
 
 def not_logout(): #Kondisi ketika user ingin logout pada keadaan belum login   
-    print("Logout gagal!\nAnda belum login, silahkan login terlebih dahulu sebelum melakukan logout")
+    print("Logout gagal!\nAnda belum login, silahkan login terlebih dahulu sebelum melakukan logout\n")
