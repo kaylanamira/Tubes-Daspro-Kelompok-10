@@ -2,6 +2,7 @@
 # ket: username : Bondowoso (akses)
 from F06 import *
 from F07 import *
+from custom_function import *
 
 def countTipeJin(user):
     # inisiasi penghitung
@@ -19,20 +20,20 @@ def countTipeJin(user):
     
 def batchKumpul(user,bahan):
     # hitung jumlah jin dengan tipe tertentu
-    countJin = countTipeJin(user)
+    countJinPengumpul = hitungJin("jin_pengumpul",user)
     
     # kondisi batchKumpul
-    if countJin[0] == 0: # jumlah jin pengumpul berjumlah 0
+    if countJinPengumpul == 0: # jumlah jin pengumpul berjumlah 0
         print("Kumpul gagal. Anda tidak punya jin pengumpul. Silahkan summon terlebih dahulu.\n")
     else:                # jumlah jin pengumpul berjumlah tidak 0
-        bahan = jinBatchKumpul(countJin[0],bahan)
+        bahan = jinBatchKumpul(countJinPengumpul,bahan)
     
     # mengembalikan array bahan    
     return bahan
 
 def batchBangun(user,bahan,candi):
     # hitung jumlah jin dengan tipe tertentu (role jin_pembangun)
-    countJinPembangun = (countTipeJin(user))[1]
+    countJinPembangun = hitungJin("jin_pembangun",user)
     
     # kondisi batchBangun
     if countJinPembangun == 0: # jumlah jin pembangun berjumlah 0

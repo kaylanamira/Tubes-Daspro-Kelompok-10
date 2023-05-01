@@ -3,6 +3,7 @@
 from F06 import *
 from F07 import *
 from F08 import *
+from custom_function import *
 
 def compareStrRajin(str1,str2):
     # pembanding        
@@ -81,15 +82,16 @@ def laporanJinNoAkses():
     
 def laporanJinDgnAkses(user,bahan,candi):
     # ambil data yang diperlukan
-    jin     = countTipeJin(user)
+    countJinPengumpul = hitungJin("jin_pengumpul",user)
+    countJinPembangun = hitungJin("jin_pembangun",user)
     jinYang = jinTer(candi)
     Bahan   = ambilDataBahan(bahan)
     
     # memasukkan data ke prosedur output
     print()
-    print("> Total jin:", jin[0] + jin[1])
-    print("> Total jin Pengumpul:", jin[0])
-    print("> Total jin Pembangun:", jin[1])
+    print("> Total jin:", countJinPembangun + countJinPengumpul)
+    print("> Total jin Pengumpul:", countJinPengumpul)
+    print("> Total jin Pembangun:", countJinPembangun)
     print("> Jin Terajin:", jinYang[0])
     print("> Jin Termalas:", jinYang[1])
     print("> Jumlah Pasir:", Bahan[0] ,"unit")
