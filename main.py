@@ -130,7 +130,9 @@ while isRun:
             elif userInput == ("hancurkancandi"):
                 hancurkan(arrayOfCandi)
             elif userInput == ("ayamberkokok"):
-                berkokok(arrayOfCandi)
+                tempVar = berkokok(arrayOfCandi)
+                isLogin = tempVar[0]
+                isRun = tempVar[1]
             elif userInput == ("save"):
                 save(arrayOfUser,arrayOfCandi,arrayOfBahan)
             elif userInput == ("help"):
