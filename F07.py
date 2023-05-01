@@ -2,31 +2,31 @@
 import random
 
 def isAdaElmt(bahan):
+    # cek di array bahan
     for i in range(0,15,3):
         if "pasir" == bahan[i]:
             return True
     return False
 
 def createElmt(bahan):
+    # mengisi array bahan dalam keadaan default
     bahan[3] = "pasir" ; bahan[4]  = "bahan pemadat" ; bahan[5]  = "0"
     bahan[6] = "batu"  ; bahan[7]  = "bahan pondasi" ; bahan[8]  = "0"
     bahan[9] = "air"   ; bahan[10] = "bahan perekat" ; bahan[11] = "0"
     return bahan    
 
-# Pertanyaan apakah deskripsi tidak usah diadakan, karena tidak berpengaruh di implementasi program
-# Pertanyaan apakah boleh memproses variabel inputan random dikonvert menjadi str dengan dinamic variabel langsung 
 def assignBahan(bahan,n1,n2,n3):
     # loop
     for i in range(0,15,3):
         if "pasir" == bahan[i]:
             temp = int(bahan[i+2]) + n1
-            bahan[i+2] = str(temp)
+            bahan[i+2] = str(temp) # diganti ke elemen pengganti
         elif "batu" == bahan[i]:
             temp = int(bahan[i+2]) + n2
-            bahan[i+2] = str(temp)
+            bahan[i+2] = str(temp) # diganti ke elemen pengganti
         elif "air" == bahan[i]:
             temp = int(bahan[i+2]) + n3
-            bahan[i+2] = str(temp)
+            bahan[i+2] = str(temp) # diganti ke elemen pengganti
     
     return bahan
 
@@ -38,6 +38,7 @@ def jinBatchKumpul(banyak,bahan):
     
     # looping sebanyak banyak jin
     for i in range(banyak):
+        # mencummon random bahan-bahan
         nPasir += random.randint(0,5)
         nBatu  += random.randint(0,5)
         nAir   += random.randint(0,5)
@@ -54,6 +55,7 @@ def jinBatchKumpul(banyak,bahan):
     return bahan
 
 def jinKumpul(bahan):
+    # mensummon random bahan-bahan
     nPasir = random.randint(0,5)
     nBatu  = random.randint(0,5)
     nAir   = random.randint(0,5)

@@ -1,4 +1,5 @@
 # F08 - Batch Kumpul/Bangun
+# ket: username : Bondowoso (akses)
 from F06 import *
 from F07 import *
 
@@ -41,6 +42,7 @@ def batchBangun(user,bahan,candi):
             tempTuple = jinBatchBangun(countJinPembangun,bahan,candi,user)
             bahan = tempTuple[0]; candi = tempTuple[1]
     
+    # mengembalikan array bahan
     return (bahan,candi)
 
 def batchBukanBandung():

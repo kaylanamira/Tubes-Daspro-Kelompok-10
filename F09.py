@@ -69,21 +69,23 @@ def jinTer(candi):
         return (tempStrRajin,tempStrMalas)
       
 def ambilDataBahan(bahan):
-    
     # cek apakah array None
     if isAdaElmt(bahan) == False:
         bahan = createElmt(bahan)
     
     return (bahan[5],bahan[8],bahan[11])
 
-# fungsi format ambil laporan jin
+# fungsi laporan jin 
 def laporanJinNoAkses():
     print("Laporan jin hanya dapat diakses oleh akun Bandung Bondowoso.\n")
     
 def laporanJinDgnAkses(user,bahan,candi):
+    # ambil data yang diperlukan
     jin     = countTipeJin(user)
     jinYang = jinTer(candi)
     Bahan   = ambilDataBahan(bahan)
+    
+    # memasukkan data ke prosedur output
     print()
     print("> Total jin:", jin[0] + jin[1])
     print("> Total jin Pengumpul:", jin[0])
