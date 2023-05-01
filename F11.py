@@ -10,15 +10,23 @@ def hancurkan(candi):
     
     # cek adanya idCandi tersebut di candi.csv
     if isAdaCandi(idCandi,candi):
-        cekYakin = input(f"Apakah anda yakin ingin menghancurkan candi ID: {idCandi} (Y/N)? ")
-        if cekYakin == "Y":
+        
+        inputBenar = False
+        while inputBenar == False:
+            cekYakin = input(f"Apakah anda yakin ingin menghancurkan candi ID: {idCandi} (Y/N)? ")
+            if cekYakin == "Y" or cekYakin == "y" or cekYakin == "N" or cekYakin == "n":
+                inputBenar = True            
+            
+        if cekYakin == "Y" or cekYakin == "y":
             candi = assignPenghancuran(idCandi,candi)
             
             # print out kalau tujuan fungsi sudah tercapai
-            print("\nCandi telah berhasil dihancurkan.")
+            print("\nCandi telah berhasil dihancurkan.\n")
             return candi
         
-        elif cekYakin == "N":
+        elif cekYakin == "N" or cekYakin == "n":
+            
+            print("\nCandi tidak jadi dihancurkan\n")
             return candi
         
     else:

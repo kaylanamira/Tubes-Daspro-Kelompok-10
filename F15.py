@@ -4,7 +4,7 @@
 def loginHelp():
     print("=========== HELP ===========")
     print("1. login \nUntuk masuk menggunakan akun")
-    print("2. exit \nUntuk keluar dari program dan kembali ke terminal")
+    print("2. exit \nUntuk keluar dari program dan kembali ke terminal\n")
 
 # Bondowoso Help
 def bondowosoHelp():
