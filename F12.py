@@ -1,5 +1,5 @@
 # F12 - Ayam Berkokok
-from F06 import *
+from custom_function import *
 
 def berkokok(candi):
     # menghitung banyak candi & UI awal

@@ -1,5 +1,5 @@
 import os
-from csvConverter import *
+from custom_function import *
 
 def load(namaFolder):
 

@@ -1,23 +1,7 @@
 # F08 - Batch Kumpul/Bangun
 # ket: username : Bondowoso (akses)
-from F06 import *
-from F07 import *
 from custom_function import *
 
-def countTipeJin(user):
-    # inisiasi penghitung
-    countPengumpul = 0
-    countPembangun = 0
-    
-    # looping penghitung
-    for i in range(5,360,3):
-        if user[i] == "jin_pengumpul":
-            countPengumpul += 1
-        if user[i] == "jin_pembangun":
-            countPembangun += 1
-
-    return (countPengumpul,countPembangun)
-    
 def batchKumpul(user,bahan):
     # hitung jumlah jin dengan tipe tertentu
     countJinPengumpul = hitungJin("jin_pengumpul",user)

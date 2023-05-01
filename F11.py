@@ -1,22 +1,5 @@
 # F11 - Hancurkan Candi
-
-def isAdaCandi(num,candi):
-    for i in range(5,505,5):
-        if candi[i] == num:
-            return True
-    return False
-    
-def assignPenghancuran(num,candi):
-    for i in range(5,505,5):
-        if candi[i] == num:
-            candi[i]   = None
-            candi[i+1] = None
-            candi[i+2] = None
-            candi[i+3] = None
-            candi[i+4] = None
-            
-    # mengembalikan hasil candi
-    return candi
+from custom_function import *
 
 def hancurkanNotLogin():
     print("hancurkancandi hanya dapat diakses oleh akun Roro Jonggrang.\n")

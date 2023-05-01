@@ -1,12 +1,5 @@
 from custom_function import *
 
-def boleh_summon(data_user):
-    jumlah_jin = hitungJin("jin_pengumpul",data_user) + hitungJin("jin_pembangun",data_user)
-    if (jumlah_jin < 100):
-        return True
-    else:
-        return False
-
 def summonjin(data_user):
     status_summon = boleh_summon(data_user)
     berhenti_summon = False

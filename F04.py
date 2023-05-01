@@ -1,13 +1,5 @@
 from custom_function import *
 
-def isAdaJin(data_user):
-    #menentukan apakah jin ada pada array data_user
-    jumlah_jin = hitungJin("jin_pengumpul",data_user) + hitungJin("jin_pembangun",data_user)
-    if (jumlah_jin == 0):
-        return False
-    else: #jumlah_jin > 0
-        return True
-
 def hapusjin(data_user,data_candi):
     #menghapus jin dari array data_user serta candi yang dibangun jin tersebut dari data_candi
     if isAdaJin(data_user):

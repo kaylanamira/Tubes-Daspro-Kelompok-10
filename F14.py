@@ -1,49 +1,6 @@
 # F14 - Save
 import os
-
-# konversi array ke string
-# user part
-def strUser(user):
-    tempStr = ""
-    
-    for i in range(360):
-        if user[i] != None and i != 359:
-            if i%3 == 2:
-                tempStr += user[i]
-                tempStr += "\n"
-            else:
-                tempStr += user[i]
-                tempStr += ";"
-                 
-    return tempStr
-
-# candi part
-def strCandi(candi):
-    tempStr = ""
-    for i in range(505):
-        if candi[i] != None and i != 505:
-            if i%5 == 4:
-                tempStr += candi[i]
-                tempStr += "\n"
-            else:
-                tempStr += candi[i]
-                tempStr += ";"
-    
-    return tempStr
-    
-# bahan part
-def strBahan(bahan):
-    tempStr = ""
-    for i in range(15):
-        if bahan[i] != None and i != 14:
-            if i%3 == 2:
-                tempStr += bahan[i]
-                tempStr += "\n"
-            else:
-                tempStr += bahan[i]
-                tempStr += ";"
-    
-    return tempStr
+from custom_function import *
 
 def save(user,candi,bahan):
     # inisiasi input awal

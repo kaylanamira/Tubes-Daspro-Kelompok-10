@@ -1,3 +1,0 @@
-hitungJin
-adaUsername
-get_index
